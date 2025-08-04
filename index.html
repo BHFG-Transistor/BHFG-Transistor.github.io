@@ -4,80 +4,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Todo App</title>
-</head>
-
-<body>
-  <div class="box"><div class="box1">Todo App</div><div class="box2"><input class="shuru" type="text" placeholder="Add Todo"/><div class="box3">Add Todo</div>
-  </div>
-  
-  <div class="nerong">
-    <div>
-    <input type="checkbox" /><span class="mingzi">计划</span>
-    </div>
-    <div class="shanchu">删除</div>
-  
-  
+  <title>CXK</title>
   <style>
-  
   .box{
-    width:98%;
-    height: 500px;
-    border-radius:20px;
-    background-color: royalblue;
-    margin-top: 20px;
-    margin-left: 10px;
+    width:100vw;
+    height:300px;
+    background: url("cxk.gif")no-repeat;    //括号里的文件就是自己要转换的GIF
+    background－size:100%;
+    -webkit-background-clip: text;
+    word-wrap: break-word;
+    color:transparent;
   }
-  .box1{
-   font-size: 40px;
-   font-weight: 800;
-   text-align: center;
-  }
-  .box2{
-    display: flex
-  }
-  .shuru{
-    padding-left: 2%;
-    border:3px solid black;
-    width:600px;
-    height:50px;
-    border-radius: 20px 0 0 20px;
-  }
-  .box3{
-    width:100px;
-    height:58px;
-    border-radius: 0 20px 20px 0;
-    background: darkblue;
-    
-    text-align: center;
-    color: white;
-    line-height: 58px;
-    cursor:pointer;
-    user-select: none;
-    
-    
-  }
-  
-  .nerong{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    box-sizing: border-box;
-    width: 80%;
-    height:50px;
-    margin: 8px auto;
-    padding: 16px;
-    border-radius: 20px;
-    border-radius: 20px;
-    box-shadow: rgba(122, 123, 140, 1)0px 8px 20px;
-    background-color: white
-  }
-  .shanchu{
-    color: red
-  }
-  body{
-background-color:rgba(239, 241, 255, 1)
-  }
-</body>
 
-  </html>
+    body{
+      background: #000000;
+    }
+    
+  </style>
+  
+  <body>
+    <div class="box">
+    </div>
+    
+    <script>
+
+const str = "&#%"; //引号之间就是要显示的文字
+setInterval(()=>{
+const box = document.querySelector(".box");
+let content = "";
+
+for(let i = 0; i < 900; i++) {
+  content += str.charAt(Math.random() * str.length | 0);
+}
+
+box.textContent = content;
+},100)
+</script>
+  </body>
+
+</html>
